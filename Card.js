@@ -5,18 +5,11 @@ import {
 } from 'react-native';
 
 const Card = ({ style, children, isScrollable, ...props }) => {
-	if (isScrollable) {
-		return (
-			<View style={style}>
-				<ScrollView {...props}>
-					{children}
-				</ScrollView>
-			</View>
-		);
-	}
 	return (
-		<View style={style} >
-			{children}
+		<View style={style}>
+			<ScrollView {...props}>
+				{children}
+			</ScrollView>
 		</View>
 	);
 }
